@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.4 (unreleased)
+1.4 (2015-10-23)
 ----------------
 
 - Support updating effective and expiration dates on ``plone.app.transmogrifier.datesupdater`` blueprint.
