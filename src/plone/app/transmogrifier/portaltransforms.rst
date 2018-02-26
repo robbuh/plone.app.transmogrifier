@@ -31,11 +31,11 @@ happening. The condition is evaluated for every matched key.
     ...     transform-title
     ...     transform-status
     ...     printer
-    ... 
+    ...
     ... [source]
     ... blueprint = collective.transmogrifier.sections.tests.samplesource
     ... encoding = utf8
-    ... 
+    ...
     ... [transform-id]
     ... blueprint = plone.app.transmogrifier.portaltransforms
     ... transform = identity
@@ -45,13 +45,13 @@ happening. The condition is evaluated for every matched key.
     ... blueprint = plone.app.transmogrifier.portaltransforms
     ... target = text/plain
     ... keys = title
-    ... 
+    ...
     ... [transform-status]
     ... blueprint = plone.app.transmogrifier.portaltransforms
     ... from = text/plain
     ... target = text/plain
     ... keys = status
-    ... 
+    ...
     ... [printer]
     ... blueprint = collective.transmogrifier.sections.logger
     ... name = logger

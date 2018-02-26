@@ -5,7 +5,7 @@ A browser default pipeline section sets the default-page on a folder, and the
 layout template on content objects. They are the Transmogrifier equivalent of
 the ``display`` menu in Plone. The browser default section blueprint name is
 ``plone.app.transmogrifier.browserdefault``. Browser default sections operate
-on objects already present in the ZODB, be they created by a constructor or 
+on objects already present in the ZODB, be they created by a constructor or
 pre-existing objects.
 
 Setting the browser default needs at least 1 piece of information: the path to
@@ -30,12 +30,12 @@ and layout keys. Like the path key, these can be specified in the source
 configuration, named by the ``default-page-key`` and ``layout-key`` options,
 respectively, and like the path key, the default keys the section looks for
 are the usual list of specific-to-generic keys based on blueprint and section
-names, from 
+names, from
 ``_plone.app.transmogrifier.browserdefault_[sectionname]_defaultpage`` and
 ``_plone.app.transmogrifier.browserdefault_[sectionname]_layout`` down to
 ``_defaultpage`` and ``_layout``.
 
-The defaultpage key will set the id of the default page that should be 
+The defaultpage key will set the id of the default page that should be
 presented when the content object is loaded, and the layout key will set the
 id of the layout to use for the content item.
 
@@ -48,13 +48,13 @@ id of the layout to use for the content item.
     ...     browserdefaultsource
     ...     browserdefault
     ...     printer
-    ...     
+    ...
     ... [browserdefaultsource]
     ... blueprint = plone.app.transmogrifier.tests.browserdefaultsource
-    ... 
+    ...
     ... [browserdefault]
     ... blueprint = plone.app.transmogrifier.browserdefault
-    ... 
+    ...
     ... [printer]
     ... blueprint = collective.transmogrifier.sections.logger
     ... name = logger

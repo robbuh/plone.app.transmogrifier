@@ -9,7 +9,7 @@ value.
 Blueprint name: ``plone.app.transmogrifier.pathfixer``
 
 Option path-key: The key of the item under which the path to be manipulated can
-                 be found. E.g. ``_path``. 
+                 be found. E.g. ``_path``.
 
 Option stripstring: A string to strip from the path value.
 
@@ -33,16 +33,16 @@ Now lets manipulate it::
     ...     schemasource
     ...     pathfixer
     ...     logger
-    ...     
+    ...
     ... [schemasource]
     ... blueprint = plone.app.transmogrifier.tests.schemasource
-    ... 
+    ...
     ... [pathfixer]
     ... blueprint = plone.app.transmogrifier.pathfixer
     ... path-key = _path
     ... stripstring = /spam/eggs/
     ... prependstring = subfolder/
-    ... 
+    ...
     ... [logger]
     ... blueprint = collective.transmogrifier.sections.logger
     ... name = logger

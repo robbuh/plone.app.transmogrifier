@@ -21,7 +21,7 @@ and ``_[key]``, where ``[sectionname]`` is replaced with the name given to the
 current section and ``[key]`` is ``path``, ``criterion`` and ``field``
 respectively. This allows you to target the right section precisely if
 needed. Alternatively, you can specify what key to use for these by
-specifying the ``path-key``, ``criterion-key`` and ``field-key`` options, 
+specifying the ``path-key``, ``criterion-key`` and ``field-key`` options,
 which should be a list of keys to try (one key per line, use a ``re:`` or
 ``regexp:`` prefix to specify regular expressions).
 
@@ -37,13 +37,13 @@ resolve to IATTopic classes.
     ...     criteriasource
     ...     criterionadder
     ...     printer
-    ...     
+    ...
     ... [criteriasource]
     ... blueprint = plone.app.transmogrifier.tests.criteriasource
-    ... 
+    ...
     ... [criterionadder]
     ... blueprint = plone.app.transmogrifier.criterionadder
-    ... 
+    ...
     ... [printer]
     ... blueprint = collective.transmogrifier.sections.logger
     ... name = logger

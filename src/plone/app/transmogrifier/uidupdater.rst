@@ -15,7 +15,7 @@ to update, and the new UID to set.
 
 To determine the path, the UID updater section inspects each item and looks
 for a path key, as described below. Any item missing this key will be skipped.
-Similarly, items with a path that doesn't exist or are not referenceable 
+Similarly, items with a path that doesn't exist or are not referenceable
 (Archetypes) objects will be skipped.
 
 The object path will be found under the first key found among the following:
@@ -58,13 +58,13 @@ items with two keys: a path under ``_path`` and a UID string under ``_uid``.
     ...     schemasource
     ...     schemaupdater
     ...     printer
-    ...     
+    ...
     ... [schemasource]
     ... blueprint = plone.app.transmogrifier.tests.uidsource
-    ... 
+    ...
     ... [schemaupdater]
     ... blueprint = plone.app.transmogrifier.uidupdater
-    ... 
+    ...
     ... [printer]
     ... blueprint = collective.transmogrifier.sections.logger
     ... name = logger
@@ -84,6 +84,6 @@ items with two keys: a path under ``_path`` and a UID string under ``_uid``.
       {'_path': '/spam/eggs/baz'}
     logger INFO
       {'_path': '/spam/notatcontent', '_uid': 'ijk'}
-    
+
     >>> pprint.pprint(plone.uids_set)
     [('spam/eggs/foo', 'abc')]
