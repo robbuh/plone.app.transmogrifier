@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from Products.Archetypes.config import UUID_ATTR
 from Products.Archetypes.interfaces import IReferenceable
 from collective.transmogrifier.interfaces import ISection

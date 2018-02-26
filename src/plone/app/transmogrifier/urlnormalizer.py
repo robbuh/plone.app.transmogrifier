@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from collective.transmogrifier.interfaces import ISection, ISectionBlueprint
 from collective.transmogrifier.utils import Expression
 from collective.transmogrifier.utils import Matcher

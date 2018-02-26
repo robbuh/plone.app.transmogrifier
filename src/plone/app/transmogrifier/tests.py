@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from DateTime.DateTime import DateTime
 from Products.Five import zcml
 from collective.transmogrifier.interfaces import ISectionBlueprint, ISection

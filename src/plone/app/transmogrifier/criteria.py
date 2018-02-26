@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from Acquisition import aq_base
 from Products.ATContentTypes.interface import IATTopic
 from collective.transmogrifier.interfaces import ISection, ISectionBlueprint

@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from Products.CMFDynamicViewFTI.interface import ISelectableBrowserDefault
 from collective.transmogrifier.interfaces import ISection, ISectionBlueprint
 from collective.transmogrifier.utils import defaultMatcher

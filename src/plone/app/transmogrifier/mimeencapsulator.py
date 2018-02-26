@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from OFS.Image import File
 from collective.transmogrifier.interfaces import ISection, ISectionBlueprint
 from collective.transmogrifier.utils import Condition
