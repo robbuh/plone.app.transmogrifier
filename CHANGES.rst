@@ -4,7 +4,8 @@ Changelog
 1.5 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- browserdefault and layout should be string not unicode.
+  [sunew]
 
 
 1.4 (2015-10-23)
