@@ -7,7 +7,8 @@ Changelog
 - Avoid failures on redirector section when there is no object in referenced path.
   [hvelarde]
 
-- browserdefault and layout should be string not unicode.
+- Fix ``plone.app.transmogrifier.browserdefault`` blueprint section:
+  ``default_page`` and ``layout`` properties should be string, not unicode.
   [sunew]
 
 
