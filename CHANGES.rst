@@ -4,6 +4,9 @@ Changelog
 1.5 (unreleased)
 ----------------
 
+- Avoid failures on redirector section when there is no object in referenced path.
+  [hvelarde]
+
 - browserdefault and layout should be string not unicode.
   [sunew]
 

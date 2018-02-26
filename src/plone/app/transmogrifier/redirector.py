@@ -79,6 +79,9 @@ class RedirectorSection(object):
                     paths = [paths]
 
                 for idx, obj in enumerate(paths):
+                    if obj is None:
+                        continue  # no object at this location
+
                     path = obj
                     is_element = isinstance(obj, (Element, ElementBase))
                     if is_element:
