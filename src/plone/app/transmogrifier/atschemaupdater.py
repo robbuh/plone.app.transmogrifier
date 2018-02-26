@@ -56,7 +56,7 @@ class ATSchemaUpdaterSection(object):
             pathkeys = defaultKeys(options['blueprint'], name, 'path')
         self.pathkey = Matcher(*pathkeys)
 
-    def __iter__(self):
+    def __iter__(self):  # noqa: C901
         for item in self.previous:
             pathkey = self.pathkey(*item.keys())[0]
 

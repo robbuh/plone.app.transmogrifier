@@ -52,7 +52,7 @@ class DisableVersioningSection(BaseVersioningSection):
                 self.save()
                 self.clear()
                 yield item
-            except:
+            except:  # noqa: B901, FIXME
                 self.restore()
             self.restore()
 

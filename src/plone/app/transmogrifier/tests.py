@@ -50,7 +50,7 @@ def portalTransformsSetUp(test):
     test.globs['plone'].portal_transforms = MockPortalTransforms()
 
 
-def aTSchemaUpdaterSetUp(test):
+def aTSchemaUpdaterSetUp(test):  # noqa: C901
     sectionsSetUp(test)
 
     from Products.Archetypes.interfaces import IBaseObject
@@ -212,7 +212,7 @@ def workflowUpdaterSetUp(test):
                         {
                             'action': 'spam',
                             'review_state': 'spammed',
-                            'time': DateTime("2014-06-20")},
+                            'time': DateTime('2014-06-20')},
                     )),
             )
     provideUtility(WorkflowSource,
@@ -547,7 +547,7 @@ def pathfixerSetUp(test):
                    name=u'plone.app.transmogrifier.tests.schemasource')
 
 
-def datesupdaterSetUp(test):
+def datesupdaterSetUp(test):  # noqa: C901
     sectionsSetUp(test)
 
     class MockPortal(MockObjectManager):

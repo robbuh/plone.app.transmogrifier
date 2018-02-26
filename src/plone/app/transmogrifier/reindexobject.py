@@ -49,7 +49,7 @@ class ReindexObjectSection(object):
 
             if self.verbose:  # add a log to display reindexation progess
                 self.counter += 1
-                logger.info("Reindex object %s (%s)", path, self.counter)
+                logger.info('Reindex object %s (%s)', path, self.counter)
 
             # update catalog
             if self.indexes:

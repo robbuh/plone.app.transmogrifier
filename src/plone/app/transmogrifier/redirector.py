@@ -46,7 +46,7 @@ class RedirectorSection(object):
         self.elementattribs = options.get('element-attributes',
                                           ('href', 'src'))
 
-    def __iter__(self):
+    def __iter__(self):  # noqa: C901
         storage = queryUtility(IRedirectionStorage)
         for item in self.previous:
             if storage is None:
@@ -134,19 +134,19 @@ class RedirectorSection(object):
                 path = item[pathkey]
                 url = urlparse.urlsplit(path)
                 new_path = (
-                    self._is_external(url) and path
-                    or posixpath.join(self.context_path,
-                                      str(path).lstrip('/'))).rstrip('/')
+                    self._is_external(url) and path or
+                    posixpath.join(
+                        self.context_path, str(path).lstrip('/'))).rstrip('/')
                 # Add any new redirects
                 for old_path in old_paths:
                     old_path = posixpath.join(
                         self.context_path,
                         str(old_path).lstrip('/')).rstrip('/')
-                    if (old_path and old_path != new_path
+                    if (old_path and old_path != new_path and
                             # Avoid recursive redirects
-                            and not new_path.startswith(old_path + '/')
-                            and not storage.has_path(old_path)
-                            and traverse(self.context, old_path) is None):
+                            not new_path.startswith(old_path + '/') and
+                            not storage.has_path(old_path) and
+                            traverse(self.context, old_path) is None):
                         self.logger.debug('Adding %r redirect: %r => %r',
                                           pathkey, old_path, new_path)
                         storage.add(old_path, new_path)

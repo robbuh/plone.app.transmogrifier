@@ -24,7 +24,7 @@ class WorkflowUpdaterSection(object):
         self.transitionskey = defaultMatcher(options, 'transitions-key', name,
                                              'transitions')
 
-    def __iter__(self):
+    def __iter__(self):  # noqa: C901
         for item in self.previous:
             keys = item.keys()
             pathkey = self.pathkey(*keys)[0]
