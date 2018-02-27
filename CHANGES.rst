@@ -1,8 +1,8 @@
 Changelog
 =========
 
-1.5 (unreleased)
-----------------
+1.4.1 (2018-02-27)
+------------------
 
 - Avoid failures on redirector section when there is no object in referenced path.
   [hvelarde]
