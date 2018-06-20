@@ -59,6 +59,7 @@ class PathFixer(object):
             if prependstring:
                 path = '%s%s' % (prependstring, path)
 
-            item[pathkey] = path
+            # convert the path to str and remove invalid characters
+            item[pathkey] = path.encode('ascii', 'ignore')
 
             yield item

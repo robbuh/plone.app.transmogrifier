@@ -4,7 +4,9 @@ Changelog
 1.4.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- ``plone.app.transmogrifier.pathfixer`` now also converts a path into ``str`` and removes any invalid characters from it;
+  this avoids ``UnicodeEncodeError`` in many blueprint sections.
+  [hvelarde]
 
 
 1.4.1 (2018-02-27)

@@ -6,6 +6,8 @@ root may have changed. This blueprint updates the old paths to match the new
 structrue by removing or appending strings from the right side of the path
 value.
 
+It also converts the path to ``str`` and removes any invalid characters from it.
+
 Blueprint name: ``plone.app.transmogrifier.pathfixer``
 
 Option path-key: The key of the item under which the path to be manipulated can
