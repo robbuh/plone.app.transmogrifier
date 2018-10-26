@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from Acquisition import aq_parent
 from Products.CMFDynamicViewFTI.interface import ISelectableBrowserDefault
 from collective.transmogrifier.interfaces import ISection, ISectionBlueprint
 from collective.transmogrifier.utils import defaultMatcher
@@ -16,8 +17,8 @@ class BrowserDefaultSection(object):
 
         self.pathkey = defaultMatcher(options, 'path-key', name, 'path')
         self.layoutkey = defaultMatcher(options, 'layout-key', name, 'layout')
-        self.defaultpagekey = defaultMatcher(options, 'default-page-key', name,
-                                             'defaultpage')
+        self.defaultpagekey = defaultMatcher(options, 'default-page-key', name,'defaultpage')
+        self.is_defaultpagekey = defaultMatcher(options, 'is-default-page-key', name,'is_defaultpage')
 
     def __iter__(self):
         for item in self.previous:
@@ -28,6 +29,7 @@ class BrowserDefaultSection(object):
 
             layoutkey = self.layoutkey(*item.keys())[0]
             defaultpagekey = self.defaultpagekey(*item.keys())[0]
+            is_defaultpagekey = self.is_defaultpagekey(*item.keys())[0]
 
             path = item[pathkey]
 
@@ -49,5 +51,12 @@ class BrowserDefaultSection(object):
                 defaultpage = item[defaultpagekey]
                 if defaultpage:
                     obj.setDefaultPage(str(defaultpage))
+
+            if is_defaultpagekey:
+                is_defaultpage = item[is_defaultpagekey]
+                if is_defaultpage:
+                    container = aq_parent(obj)
+                    defaultpage = obj.getId()
+                    container.setDefaultPage(str(defaultpage))
 
             yield item
